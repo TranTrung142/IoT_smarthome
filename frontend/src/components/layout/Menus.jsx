@@ -24,8 +24,13 @@ function Menus(props) {
   const history = useHistory();
   const [collapsed, setCollapsed] = useState(false);
   const [marginLeft, setMarginLeft] = useState("220");
-  const [anchorEl, setAnchorEl] = useState(null);
   const [current, setCurrent] = useState("mail");
+
+  let keyMenu;
+  let tmp = window.location.pathname;
+  let tmpArr = tmp.split("/");
+  keyMenu = `/${tmpArr[1]}`;
+  console.log("key ", keyMenu, ", ", tmpArr);
 
   const onCollapse = (collapse, type) => {
     // console.log("co:"+collapse+", type: "+type);
@@ -36,15 +41,16 @@ function Menus(props) {
       setMarginLeft("220");
     }
   };
+  console.log("location ", [window.location.pathname]);
 
   const handleClick = (event) => {
     // setAnchorEl(event.currentTarget);
     setCurrent(event.key);
   };
   const handleLogout = () => {
-	  localStorage.removeItem('token');
-	  localStorage.removeItem('userId');
-		history.push('/login');
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
+    history.push("/login");
   };
 
   return (
@@ -65,7 +71,7 @@ function Menus(props) {
           theme="dark"
           mode="inline"
           selectable={false}
-          selectedKeys={[window.location.pathname]}
+          selectedKeys={[keyMenu]}
         >
           <Menu.Item key="/" icon={<HomeOutlined />}>
             <NavLink to="/">Home</NavLink>
