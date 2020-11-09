@@ -8,11 +8,12 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import imgHome from "image/home.jpg";
-import imgModelHome from "image/model_home.jpg";
 import "./Home.css";
 
 import { Card as CardAntd } from "antd";
+
+const imgHome = `${process.env.PUBLIC_URL}image/home.jpg`;
+const imgModelHome = `${process.env.PUBLIC_URL}image/model_home.jpg`;
 
 const { Meta } = CardAntd;
 
@@ -132,7 +133,7 @@ function Home(props) {
                 <CardMedia
                   component="img"
                   alt="Image smart home"
-                  height="240"
+                  height="306"
                   image={imgModelHome}
                   title="Modeling of smart home"
                 />

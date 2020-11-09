@@ -21,6 +21,8 @@ import UserData from 'database/user.js';
 import { useState } from "react";
 import { useEffect } from "react";
 
+const imgProfile = `${process.env.PUBLIC_URL}image/img_profile.jpg`;
+
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 900,
@@ -101,7 +103,7 @@ function Profile(props) {
           />
           <CardMedia
             className={classes.media}
-            image="https://eurocook.com.vn/Data/upload/images/Smart%20Home/smarthome.jpg"
+            image={imgProfile}
             title="Paella dish"
           />
           <CardContent>

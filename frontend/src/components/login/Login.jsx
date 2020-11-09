@@ -3,12 +3,12 @@ import "antd/dist/antd.css";
 import "./Login.css";
 import { Form, Input, Button, Checkbox, Row, Col } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
-import Background from 'image/backgroundLogin.jpg';
-import ImgLogin from 'image/img_login.jpeg';
 import UserData from 'database/user.js';
 import { setCookie } from "utils/Cookie";
 import { Redirect, useHistory } from "react-router-dom";
 // import { Redirect, useHistory } from "react-router";
+const Background = `${process.env.PUBLIC_URL}/image/backgroundLogin.jpg`;
+const ImgLogin = `${process.env.PUBLIC_URL}/image/img_login.jpeg`;
 
 function Login(props) {
     const history = useHistory();
