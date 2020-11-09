@@ -21,9 +21,11 @@ function MainAppRoutes(props) {
       <Suspense fallback={<Loading />}>
         <Switch>
           <PrivateRoute component={Home} exact path="/" />
-          <PrivateRoute component={Rooms} exact path="/rooms" />
-          <PrivateRoute component={Deveices} exact path="/deveices" />
-          <PrivateRoute component={Profile} exact path="/profile" />
+          <PrivateRoute component={Rooms} path="/rooms" />
+          <PrivateRoute component={Deveices} path="/deveices" />
+          <PrivateRoute component={Profile} path="/profile" />
+          
+          
 
           <PrivateRoute component={Test} path="/test" />
 
