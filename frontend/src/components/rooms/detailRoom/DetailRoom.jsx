@@ -68,12 +68,8 @@ function DetailRoom(props) {
           <Row className="temp-3">
               <Col span={24}>
               <Card hoverable cover={<FaLightbulb size={50} />}>
-                <Switch
-                  checkedChildren="on"
-                  unCheckedChildren="off"
-                  defaultChecked
-                />
-                <Meta title="Lights" />
+                
+                <div style={{ fontSize: 30 }}>Detail</div>
               </Card>
               </Col>
           </Row>
@@ -95,12 +91,8 @@ function DetailRoom(props) {
           <Row className="detail-3">
               <Col span={24}>
               <Card hoverable cover={<FaLightbulb size={50} />}>
-                <Switch
-                  checkedChildren="on"
-                  unCheckedChildren="off"
-                  defaultChecked
-                />
-                <Meta title="Lights" />
+                
+                <div style={{ fontSize: 30 }}>Detail</div>
               </Card>
               </Col>
           </Row>
