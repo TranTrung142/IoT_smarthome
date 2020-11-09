@@ -3,7 +3,8 @@ import "antd/dist/antd.css";
 import "./Login.css";
 import { Form, Input, Button, Checkbox, Row, Col } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
-import Background from '../../image/background_login.jpg';
+import Background from 'image/backgroundLogin.jpg';
+import ImgLogin from 'image/img_login.jpeg';
 import UserData from 'database/user.js';
 import { setCookie } from "utils/Cookie";
 import { Redirect, useHistory } from "react-router-dom";
@@ -49,7 +50,7 @@ function Login(props) {
       <Row >
         <Col span={12} style={{"marginTop": "100px", marginLeft: '20px'}}>
             <img 
-                src="https://www.magility.com/wp-content/uploads/Smart-Home-wann-kommt-die-vernetzte-Revolution-zuhause-scaled.jpeg" 
+                src={ImgLogin}
                 alt=""
                 style={{"width": "100%", 'height': '100%', borderRadius: '50%',opacity: '0.8'}} 
             />
@@ -63,6 +64,7 @@ function Login(props) {
               remember: true,
             }}
             onFinish={onFinish}
+            style={{minWidth:'300px'}}
           >
             <Form.Item
               name="username"
@@ -97,8 +99,6 @@ function Login(props) {
               <Form.Item name="remember" valuePropName="checked" noStyle>
                 <Checkbox>Remember me</Checkbox>
               </Form.Item>
-              Forgot password
-              {/* <a className="login-form-forgot" href=""></a> */}
             </Form.Item>
 
             <Form.Item>
