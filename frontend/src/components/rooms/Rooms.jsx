@@ -6,6 +6,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import "./Rooms.css";
 // import imgModelHome from "image/model_home.jpg";
 
 import { roomList, imageRoom } from "database/Rooms/Roomsconfig";
@@ -20,23 +21,24 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 540,
     marginBottom: 15,
+    marginRight: 15,
   },
 });
 
 const renderRooms = (classes, history) => {
   let rooms = roomList.map((room, index) => {
     return (
-      <Col span={12} key={room.id}>
+      <Col span={8} key={room.id} >
         <Card className={classes.root} onClick={()=>{history.push(`/rooms/${room.id}`)}}>
           <CardActionArea>
             <CardMedia
               component="img"
               alt="Image smart home"
-              height="306"
+              height="240"
               image={imageRoom.get(room.image)}
               title={room.name}
             />
-            <CardContent>
+            <CardContent style={{padding: "4px"}}>
               <Typography
                 gutterBottom
                 variant="h5"

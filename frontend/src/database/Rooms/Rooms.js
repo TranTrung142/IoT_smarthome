@@ -19,4 +19,9 @@ export const rooms = [
         name: "Study room",
         image: "StudyRoom",
     },
+    {
+        id: "5",
+        name: "Balcony room",
+        image: "BalconyRoom",
+    },
 ]
