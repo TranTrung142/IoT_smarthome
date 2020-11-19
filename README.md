@@ -5,6 +5,6 @@
 ```python
 > git clone https://github.com/TranTrung142/IoT_smarthome.git
 > cd frontend
-> git install
+> npm install
 > npm start
 ```
